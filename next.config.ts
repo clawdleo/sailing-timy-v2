@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'static.wixstatic.com',
-        pathname: '/media/**',
+        pathname: '/**',
       },
       {
         protocol: 'https',

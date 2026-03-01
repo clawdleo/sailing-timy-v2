@@ -122,16 +122,18 @@ export default function Home() {
         </div>
       </motion.nav>
 
-      {/* Hero Section - Aerial Croatian Coast */}
+      {/* Hero Section - Video Background */}
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <motion.div style={{ opacity: heroOpacity, scale: heroScale }} className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1920&q=80"
-            alt="Aerial view of Croatian islands"
-            fill
-            className="object-cover"
-            priority
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/hero-video.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-black/40" />
         </motion.div>
         
@@ -385,8 +387,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <section className="py-20 md:py-32">
+        <div className="max-w-[1660px] mx-auto px-5 md:px-12">
+          <FadeInSection className="text-center mb-16">
+            <span className="text-sm uppercase tracking-[0.2em] text-gray-400 mb-4 block">Gallery</span>
+            <h2 className="text-3xl md:text-5xl font-medium">Moments at Sea</h2>
+          </FadeInSection>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              'https://static.wixstatic.com/media/12467b_0f77783bac784c6290be716da90eac60~mv2.jpg/v1/fill/w_620,h_350,q_90,enc_avif,quality_auto/12467b_0f77783bac784c6290be716da90eac60~mv2.jpg',
+              'https://static.wixstatic.com/media/12467b_37aaca1b5a7c43349a156bc6a222a473~mv2.jpg/v1/fill/w_622,h_414,q_90,enc_avif,quality_auto/12467b_37aaca1b5a7c43349a156bc6a222a473~mv2.jpg',
+              'https://static.wixstatic.com/media/12467b_4ad54258527848a1aefb040b883afb3a~mv2.jpg/v1/fill/w_620,h_350,q_90,enc_avif,quality_auto/12467b_4ad54258527848a1aefb040b883afb3a~mv2.jpg',
+              'https://static.wixstatic.com/media/12467b_4cabd7daaaef4945add05048395dd163~mv2.jpg/v1/fill/w_620,h_610,q_90,enc_avif,quality_auto/12467b_4cabd7daaaef4945add05048395dd163~mv2.jpg',
+              'https://static.wixstatic.com/media/12467b_4fd9e4f24f004597b8eec702e3b086a9~mv2.jpg/v1/fill/w_620,h_612,q_90,enc_avif,quality_auto/12467b_4fd9e4f24f004597b8eec702e3b086a9~mv2.jpg',
+              'https://static.wixstatic.com/media/12467b_6521e72f6fa7439ab8cbf557fe149362~mv2.jpg/v1/fill/w_1244,h_700,q_90,enc_avif,quality_auto/12467b_6521e72f6fa7439ab8cbf557fe149362~mv2.jpg',
+              'https://static.wixstatic.com/media/b9f14f_14f3ce0d2de14d41b76a729d0056d8e9~mv2.jpg/v1/fill/w_990,h_676,al_c,q_85,enc_avif,quality_auto/20210716_192712.jpg',
+              'https://static.wixstatic.com/media/b9f14f_2d08e727c0394b2484b8a1851b3ed8dc~mv2.jpg/v1/fill/w_910,h_676,al_c,q_85,enc_avif,quality_auto/20210716_192742.jpg',
+            ].map((src, i) => (
+              <FadeInSection key={i} delay={i * 0.05}>
+                <div className={`rounded-2xl overflow-hidden ${i === 3 || i === 4 ? 'row-span-2' : ''}`}>
+                  <Image
+                    src={src}
+                    alt={`Sailing Timy gallery ${i + 1}`}
+                    width={600}
+                    height={400}
+                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              </FadeInSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Section - Professional SVG Icons */}
-      <section id="services" className="py-20 md:py-32">
+      <section id="services" className="py-20 md:py-32 bg-white">
         <div className="max-w-[1660px] mx-auto px-5 md:px-12">
           <FadeInSection className="text-center mb-16">
             <span className="text-sm uppercase tracking-[0.2em] text-gray-400 mb-4 block">Why Choose Us</span>
@@ -610,8 +647,8 @@ export default function Home() {
       <section id="contact" className="relative py-32 md:py-40 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1920&q=80"
-            alt="Sailing on the sea"
+            src="https://static.wixstatic.com/media/12467b_0f77783bac784c6290be716da90eac60~mv2.jpg/v1/fill/w_1550,h_875,q_90,enc_avif,quality_auto/12467b_0f77783bac784c6290be716da90eac60~mv2.jpg"
+            alt="Sailing on the Adriatic"
             fill
             className="object-cover"
           />
