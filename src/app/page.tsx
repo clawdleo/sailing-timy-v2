@@ -126,8 +126,8 @@ export default function Home() {
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <motion.div style={{ opacity: heroOpacity, scale: heroScale }} className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1555990538-1e7f4f134722?w=1920&q=80"
-            alt="Croatian Coast Aerial View"
+            src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1920&q=80"
+            alt="Aerial view of Croatian islands"
             fill
             className="object-cover"
             priority
@@ -610,8 +610,8 @@ export default function Home() {
       <section id="contact" className="relative py-32 md:py-40 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1920&q=80"
-            alt="Croatian Islands"
+            src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1920&q=80"
+            alt="Sailing on the sea"
             fill
             className="object-cover"
           />
