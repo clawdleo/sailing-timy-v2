@@ -122,14 +122,24 @@ export default function Home() {
         </div>
       </motion.nav>
 
-      {/* Hero Section - Video Background */}
+      {/* Hero Section - Video Background with Image Fallback */}
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <motion.div style={{ opacity: heroOpacity, scale: heroScale }} className="absolute inset-0">
+          {/* Fallback Image */}
+          <Image
+            src="https://static.wixstatic.com/media/12467b_0f77783bac784c6290be716da90eac60~mv2.jpg/v1/fill/w_1920,h_1080,q_90,enc_avif,quality_auto/12467b_0f77783bac784c6290be716da90eac60~mv2.jpg"
+            alt="Sailing in Croatia"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Video overlay */}
           <video
             autoPlay
             muted
             loop
             playsInline
+            poster="https://static.wixstatic.com/media/12467b_0f77783bac784c6290be716da90eac60~mv2.jpg/v1/fill/w_1920,h_1080,q_90,enc_avif,quality_auto/12467b_0f77783bac784c6290be716da90eac60~mv2.jpg"
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source src="/hero-video.mp4" type="video/mp4" />
