@@ -93,14 +93,16 @@ export default function Home() {
         <div className="max-w-[1660px] mx-auto px-5 md:px-12">
           <div className="flex justify-between items-center h-16 md:h-20">
             <a href="#" className="flex items-center gap-3">
-              <Image
-                src="https://static.wixstatic.com/media/b9f14f_b7accfdba0874f60b68adc89cc58d6c0~mv2.png/v1/fill/w_96,h_96,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo%20png%20bel.png"
-                alt="Sailing Timy"
-                width={44}
-                height={44}
-                className="rounded-full"
-              />
-              <span className="font-medium text-lg tracking-tight hidden sm:block">Sailing Timy</span>
+              <div className="w-12 h-12 bg-black rounded-full p-1 flex items-center justify-center">
+                <Image
+                  src="https://static.wixstatic.com/media/b9f14f_b7accfdba0874f60b68adc89cc58d6c0~mv2.png/v1/fill/w_96,h_96,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo%20png%20bel.png"
+                  alt="Sailing Timy"
+                  width={40}
+                  height={40}
+                  className="rounded-full"
+                />
+              </div>
+              <span className="font-semibold text-xl tracking-tight hidden sm:block">Sailing Timy</span>
             </a>
             
             <div className="hidden md:flex items-center gap-10">
@@ -685,14 +687,16 @@ export default function Home() {
         <div className="max-w-[1660px] mx-auto px-5 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="flex items-center gap-3">
-              <Image
-                src="https://static.wixstatic.com/media/b9f14f_b7accfdba0874f60b68adc89cc58d6c0~mv2.png/v1/fill/w_96,h_96,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo%20png%20bel.png"
-                alt="Sailing Timy"
-                width={40}
-                height={40}
-                className="rounded-full"
-              />
-              <span className="font-medium">Sailing Timy</span>
+              <div className="w-11 h-11 bg-black rounded-full p-1 flex items-center justify-center">
+                <Image
+                  src="https://static.wixstatic.com/media/b9f14f_b7accfdba0874f60b68adc89cc58d6c0~mv2.png/v1/fill/w_96,h_96,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo%20png%20bel.png"
+                  alt="Sailing Timy"
+                  width={36}
+                  height={36}
+                  className="rounded-full"
+                />
+              </div>
+              <span className="font-semibold text-lg">Sailing Timy</span>
             </div>
             
             <div className="flex gap-6">
