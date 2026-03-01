@@ -40,6 +40,31 @@ function ParallaxImage({ src, alt, className = '' }: { src: string; alt: string;
   );
 }
 
+// Icon components (professional SVGs)
+const CompassIcon = () => (
+  <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 0v2m0 16v2m10-10h-2M4 12H2m15.07-5.07l-1.41 1.41M8.34 15.66l-1.41 1.41m0-11.14l1.41 1.41m7.32 7.32l1.41 1.41M12 8l-2 4 4 2-2-6z" />
+  </svg>
+);
+
+const ShieldIcon = () => (
+  <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+  </svg>
+);
+
+const SparkleIcon = () => (
+  <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+  </svg>
+);
+
+const ChefIcon = () => (
+  <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.055 4.024.165C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 1.5v-1.5m12 9.75l-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 16.5m15-3.38a48.474 48.474 0 00-6-.37c-2.032 0-4.034.125-6 .37m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.17c0 .62-.504 1.124-1.125 1.124H4.125A1.125 1.125 0 013 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 016 13.12M12.265 3.11a.375.375 0 11-.53 0L12 2.845l.265.265zm-3 0a.375.375 0 11-.53 0L9 2.845l.265.265zm6 0a.375.375 0 11-.53 0L15 2.845l.265.265z" />
+  </svg>
+);
+
 export default function Home() {
   const [formData, setFormData] = useState({ name: '', email: '', date: '', message: '' });
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -95,17 +120,17 @@ export default function Home() {
         </div>
       </motion.nav>
 
-      {/* Hero Section */}
+      {/* Hero Section - Aerial Croatian Coast */}
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <motion.div style={{ opacity: heroOpacity, scale: heroScale }} className="absolute inset-0">
           <Image
-            src="https://static.wixstatic.com/media/b9f14f_45c4f012da3048b590aef127a00cb43f~mv2.jpg/v1/fill/w_1872,h_1400,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/20210613_185211.jpg"
-            alt="Sailing in Croatia"
+            src="https://images.unsplash.com/photo-1555990538-1e7f4f134722?w=1920&q=80"
+            alt="Croatian Coast Aerial View"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-black/40" />
         </motion.div>
         
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
@@ -117,7 +142,7 @@ export default function Home() {
           >
             <span className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-5 py-2.5 rounded-full text-sm font-medium">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              World Circumnavigator &bull; 30,000+ Nautical Miles
+              Professional Skipper Service in Croatia
             </span>
           </motion.div>
           
@@ -127,7 +152,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.1] mb-8"
           >
-            Sail the Adriatic<br />with a Story
+            Discover the Adriatic<br />Like Never Before
           </motion.h1>
           
           <motion.p
@@ -136,7 +161,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
-            Experience Croatia&apos;s hidden bays with Peter, a skipper who spent 3 years sailing around the world. No deposit. No stress. Just pure adventure.
+            Experience Croatia&apos;s hidden bays with Peter, a seasoned skipper with over 20 years of experience. No deposit. No stress. Just pure adventure.
           </motion.p>
           
           <motion.div
@@ -358,7 +383,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Professional SVG Icons */}
       <section id="services" className="py-20 md:py-32">
         <div className="max-w-[1660px] mx-auto px-5 md:px-12">
           <FadeInSection className="text-center mb-16">
@@ -369,29 +394,29 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: '🧭',
-                title: 'World-Class Skipper',
-                desc: 'Peter circumnavigated the globe. 30,000+ miles of ocean crossings, not just coastal charters.'
+                icon: <CompassIcon />,
+                title: 'Experienced Skipper',
+                desc: 'Peter has sailed over 30,000 nautical miles including a complete circumnavigation. Your safety and adventure are in expert hands.'
               },
               {
-                icon: '💰',
+                icon: <ShieldIcon />,
                 title: 'No Deposit Required',
                 desc: 'We trust our guests. No security deposit means no stress before your holiday begins.'
               },
               {
-                icon: '✨',
-                title: 'No Check-in Hassle',
+                icon: <SparkleIcon />,
+                title: 'Hassle-Free Boarding',
                 desc: 'Skip the terminal queues and paperwork. We handle everything for seamless boarding.'
               },
               {
-                icon: '👩‍🍳',
+                icon: <ChefIcon />,
                 title: 'Hostess Available',
                 desc: 'Natalija can join as chef, preparing gourmet meals daily while you enjoy the sea.'
               },
             ].map((item, i) => (
               <FadeInSection key={i} delay={i * 0.1}>
                 <div className="bg-white rounded-2xl p-8 border border-gray-100 h-full hover:shadow-lg hover:border-gray-200 transition-all duration-300">
-                  <div className="text-5xl mb-6">{item.icon}</div>
+                  <div className="text-black mb-6">{item.icon}</div>
                   <h3 className="font-medium text-xl mb-3">{item.title}</h3>
                   <p className="text-gray-500 leading-relaxed">{item.desc}</p>
                 </div>
@@ -405,8 +430,8 @@ export default function Home() {
       <section id="reviews" className="py-20 md:py-32 bg-white">
         <div className="max-w-[1660px] mx-auto px-5 md:px-12">
           <FadeInSection className="text-center mb-16">
-            <span className="text-sm uppercase tracking-[0.2em] text-gray-400 mb-4 block">What Our Guests Say</span>
-            <h2 className="text-3xl md:text-5xl font-medium">Real Stories from Real Adventurers</h2>
+            <span className="text-sm uppercase tracking-[0.2em] text-gray-400 mb-4 block">Testimonials</span>
+            <h2 className="text-3xl md:text-5xl font-medium">What Our Guests Say</h2>
           </FadeInSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -415,19 +440,16 @@ export default function Home() {
                 quote: '"Natalija\'s cuisine was truly top-notch, tastier than many restaurants. Both are friendly and flexible, always listening to guests\' wishes."',
                 name: 'John & Grace',
                 location: 'Australia',
-                image: 'https://static.wixstatic.com/media/b9f14f_45c4f012da3048b590aef127a00cb43f~mv2.jpg/v1/fill/w_200,h_200,al_c,q_80,usm_0.66_1.00_0.01/20210613_185211.jpg'
               },
               {
                 quote: '"We\'ve sailed with them four times. I love that I can participate in sailing under Peter\'s watchful eye. He shares experiences and explains everything."',
                 name: 'Toni',
                 location: 'Slovenia',
-                image: 'https://static.wixstatic.com/media/b9f14f_14f3ce0d2de14d41b76a729d0056d8e9~mv2.jpg/v1/fill/w_200,h_200,al_c,q_80/20210716_192712.jpg'
               },
               {
                 quote: '"Completely carefree sailing. Peter is extremely professional — you feel safe at all times. He took us to beautiful bays we\'d never find alone."',
                 name: 'Eric',
                 location: 'England',
-                image: 'https://static.wixstatic.com/media/b9f14f_2d08e727c0394b2484b8a1851b3ed8dc~mv2.jpg/v1/fill/w_200,h_200,al_c,q_80/20210716_192742.jpg'
               },
             ].map((t, i) => (
               <FadeInSection key={i} delay={i * 0.1}>
@@ -441,8 +463,8 @@ export default function Home() {
                   </div>
                   <p className="text-gray-600 mb-8 leading-relaxed">{t.quote}</p>
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden">
-                      <Image src={t.image} alt={t.name} width={48} height={48} className="object-cover w-full h-full" />
+                    <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-medium">
+                      {t.name.charAt(0)}
                     </div>
                     <div>
                       <div className="font-medium">{t.name}</div>
@@ -586,8 +608,8 @@ export default function Home() {
       <section id="contact" className="relative py-32 md:py-40 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://static.wixstatic.com/media/b9f14f_45c4f012da3048b590aef127a00cb43f~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_85/20210613_185211.jpg"
-            alt="Sailing"
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1920&q=80"
+            alt="Croatian Islands"
             fill
             className="object-cover"
           />
@@ -596,8 +618,8 @@ export default function Home() {
         
         <div className="relative z-10 max-w-4xl mx-auto px-5 md:px-12">
           <FadeInSection className="text-center text-white mb-12">
-            <span className="text-sm uppercase tracking-[0.2em] text-white/60 mb-4 block">Ready to Make Waves?</span>
-            <h2 className="text-3xl md:text-5xl font-medium mb-6">Your perfect day on the water is just a few clicks away.</h2>
+            <span className="text-sm uppercase tracking-[0.2em] text-white/60 mb-4 block">Ready to Set Sail?</span>
+            <h2 className="text-3xl md:text-5xl font-medium mb-6">Your perfect adventure awaits</h2>
             <p className="text-white/70 text-lg">Send us an inquiry and Peter will get back to you within 24 hours.</p>
           </FadeInSection>
 
